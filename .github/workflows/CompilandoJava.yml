@@ -22,10 +22,13 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         
-    - name: Compilar Projeto
+    - name: Compilar Main
       run: javac -cp src src/Main.java
+    
+    - name: Compilar Main
+      run: javac -cp src src/Teste.java
       
     - name: Executando o Projeto
       run: |
         cd src
-        java Main
+        java Teste
